@@ -1,1 +1,5 @@
 Que: What is Emmet?
+
+Que: What is React.createElement?
+Ans: The first argument of createElement is the tag name, the second argument is the attributes(props) and the third argument 
+is the children

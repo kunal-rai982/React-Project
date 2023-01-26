@@ -1,0 +1,61 @@
+Que: What is main in package.json?
+Ans: The main field is a module ID that is the primary entry point to your program.
+ 
+Que: what are bundlers?
+Ans: so bundlers are javascript package which is used to combine many different files of js code and its dependencies 
+into a single js file with everything merged production ready loadable in browser. this file compressed as 
+much as possible to  reduce the time it takes to get your software dowmloaded and displayed in your visitors browser.  There are many bundlers available 
+such as webpack, vite, parcel. They perform many work such as handling our dependencies, minifying our files,
+work as an combinator. 
+
+Que: What is a package Manager?
+Ans: A package manager is a system that will maintain a projects dependencies(a dependency is a third party
+bit of software that was written by someone else and solves a problem of you, a project can have multiple dependencies),
+although we can do it manually but as the project gets bigger and we have many dependencies its become challenging to 
+track all them, so we use a package manager as it guarantees that the package added and removed cleanly. 
+we have package manager like npm,yarn, pnpm
+
+	 
+Que: What is npm?
+Ans: NPM is a package manager, as we can have many packages in our app, and these PACKAges are present using npm
+
+Que: What is caret and tilde in package.json?
+Ans: so in package.json the dependencies with there version numbers are written, and the format of that version is three numbers seperated by dot (1.2.3),
+here the first number from the left i.e. 1 are the major release and the second number from the left (i.e 2) is the minor release and the third last number 
+are the patch release of the package, so the tilde (~) notation before the version number tell that update only the patch releases this freezes the major and minor
+version. And caret(^) notation is used for automatically updating the minor updates along with the patch updates
+
+Que: What is the differnce between package.json and package-lock.json?
+Ans: 
+
+
+Que: Differnce between dependencies and what is dev dependencies?
+Ans: in pakcage.json the dependency is an object that contains the packages and librabries with its version number which your project uses
+and on the other hand devDependencies object contains all the packages with its version number that are used in the project in its development
+phase and not in the production or testing environment. ("dependencies": Packages required by your application in production, "devDependencies": Packages that are only needed for local development and testing.)
+
+Que : what is minification or minify?
+ans. Minification, also known as minimization, is the process of removing all unnecessary characters from JavaScript source 
+code without altering its functionality. This includes the removal of whitespace, comments, and semicolons, along with the 
+use of shorter variable names and functions. Minification of JavaScript code results in compact file size.
+
+Que: What  is .parcel-cache?
+Ans: Parcel caches everything it builds to disk. If you restart the dev server, Parcel will only rebuild files that have changed 
+since the last time it ran. Parcel automatically tracks all of the files, configuration, plugins, and dev dependencies that are 
+involved in your build, and granularly invalidates the cache when something changes. For example, if you change a configuration file, all 
+of the source files that rely on that configuration will be rebuilt. By default, the cache is stored in the .parcel-cache folder inside your project.
+You should add this folder to your .gitignore (or equivalent) so that it is not committed in your repo.
+
+Que: What is dist folder?
+Ans: Dist folder is created when we execute our project and it keeps the files minified for us, and if created a production bulit 
+using the command 'npx parcel build index.html' it creates minified js, css, html file for production, parcel bundlers all our 
+code and place it in dist folder 
+
+Que: What is transitive dependencies?
+Ans: we have parcel with us and parcel also have its own dependencies and these dependencies can also have there own dependencies,
+which can have thier own depen , and that also have thier own depen and this is known as transitive dependencies(it is not 
+react or parcel thing but more as it is general thing).
+
+Que: how can you build a performant web scalable app or why your app is faster?
+Ans: so there are so much things that react gives us and there are so much things bundler optimises for us, a whole application is 
+a combination of all things (tree shaking, minification, compression etc)
